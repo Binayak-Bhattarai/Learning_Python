@@ -2,7 +2,7 @@
 
 balance =25000
 pin=1234
-
+# 3 chances for entering pin requires the concept of looping so not included here
 
 upin=int(input("Enter pin number:- \t"))
 
@@ -24,7 +24,7 @@ else:
         case 2:
             amount=float(input("enter deposite amount\t"))
             if(amount<=0 ):
-                print("You entered wrong amount , program terminated!!")
+                print("Invalid amount. Please enter a positive value.")
             else:
                 balance= balance + amount
                 print("Rs",amount,"was deposited successfully")
@@ -33,7 +33,7 @@ else:
         case 3:
             amount=float(input("enter withdraw amount\t"))
             if(amount<=0 or amount >balance):
-                print("You entered wrong amount , program terminated!!")
+               print("Invalid amount. Please enter a positive value.")
             else:
                  balance= balance - amount
                  print("Rs",amount,"was withdrawn successfully")
